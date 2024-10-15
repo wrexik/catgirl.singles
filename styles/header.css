@@ -1,0 +1,135 @@
+/* Header section */
+.header {
+    display             : flex;
+    width               : 100vw;
+
+    justify-content     : center;
+}
+
+/* ASCII art title */
+.header pre {
+    font-size           : min(2vw, 15pt);
+    background-repeat   : no-repeat;
+    background-clip     : text;
+    color               : transparent;
+
+    -webkit-background-clip     : text;
+
+    text-shadow         : 0 0 20px white;
+    white-space         : pre !important;
+    line-break          : none;
+    text-align          : left;
+
+    animation: animate-colors 10s linear infinite;
+}
+
+@keyframes animate-colors {
+    0% {
+        background-image: linear-gradient(#8888ff, #8888ff, var(--pink-bright), white, white, white, white);
+    }
+    25% {
+        background-image: linear-gradient(white, white, var(--pink-bright), #8888ff, #8888ff, #8888ff, #8888ff);
+    }
+    50% {
+        background-image: linear-gradient(var(--pink-bright), var(--pink-bright), white, #8888ff, #8888ff, #8888ff, #8888ff);
+    }
+    75% {
+        background-image: linear-gradient(var(--pink-bright), var(--pink-bright), white, #8888ff, #8888ff, #8888ff, #8888ff);
+    }
+    100% {
+        background-image: linear-gradient(#8888ff, #8888ff, var(--pink-bright), white, white, white, white);
+    }
+}
+/* Navigation bar */
+.navigation {
+    display         : flex;
+    position        : relative;
+    height          : 20pt;
+    padding         : 0px;
+    margin-left     : 20px;
+    margin-right    : 20px;
+
+    overflow        : visible;
+
+    background      : transparent;
+
+    align-content   : middle;
+    justify-content : center;
+    flex-wrap       : nowrap;
+}
+
+/* Links in navbar */
+.navigation a {
+    position        : relative;
+    display         : inline-block;
+    width           : 75pt;
+    height          : 16pt;
+    padding-top     : 2pt;
+    margin          : 0px;
+    margin-left     : 10pt;
+    margin-right    : 10pt;
+
+    overflow        : visible;
+
+    color           : var(--nav-fg);
+    border          : var(--nav-border);
+
+    text-decoration : none;
+
+    transition      : all .2s;
+
+    font-family: IBM-vga;
+}
+.navigation a:hover {
+    color        : var(--nav-fg-hover);
+    background   : var(--nav-bg-hover);
+    box-shadow   : 0 0 15px 1px var(--pink-bright);
+    animation    : ee_fx_a    5s linear 0s 1 normal forwards;
+}
+
+.navigation a:hover:after {
+    top        : -6pt;
+    left       : -6pt;
+    border     : 2px solid transparent;
+    border-image : linear-gradient(
+        -180deg,
+        var(--pink-bright) 10pt,
+        transparent 10pt calc(100% - 10pt),
+        var(--pink-bright) calc(100% - 10pt)
+    ) 1;
+    width      : calc(100% + 10pt);
+    height     : calc(100% + 10pt);
+    position   : absolute;
+    content    : "";
+}
+
+.terminal-shake
+{
+    animation: shake 6s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@font-face {
+    font-family: "IBM-vga";
+    src: url("/static/fonts/ibmvga.woff") format('woff');
+  }
+
+.ibm-vega {
+
+    /* Web437_IBM_VGA_8x16.woff */
+
+    font-family: 'IBM VGA';
+}

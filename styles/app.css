@@ -1,0 +1,71 @@
+/* "App" windows */
+.app {
+    padding-bottom      : 10pt;
+    margin              : 20px;
+
+    overflow-x          : hidden;
+    overflow-y          : auto;
+
+    background          : var(--app-bg);
+    color               : var(--app-fg);
+    border              : var(--app-border);
+    box-shadow          : var(--app-glow);
+
+    scrollbar-color     : #aa5aaa88 #0000;
+}
+
+/* Limit "app" size on particularly large screens */
+@media 
+    only screen                 /* Target screens only */
+    and  (min-width: 1540px)    /* Target widths of over 1540px */
+{
+    .app {
+        width           : 1500px;
+        max-width       : 1500px;
+
+        margin-left     : auto;
+        margin-right    : auto;
+    }
+}
+
+/* "App" title span */
+.app_title {
+    display             : block;
+    width               : 100%;
+    max-height          : 10pt;
+    margin              : 0px;
+    padding-left        : 2pt;
+    padding-bottom      : 2pt;
+
+    text-align          : left;
+
+    overflow-y          : hidden;
+
+    background          : var(--app-title-bg);
+    color               : var(--app-title-fg);
+    box-shadow          : var(--app-glow);
+
+    font-size           : 8pt;
+    font-weight         : bold;
+
+    transition          : all .2s;
+}
+.app.collapsible summary {
+    list-style : none;
+    cursor     : pointer;
+}
+.app.collapsible summary h3 {
+    display     : block;
+    padding     : 5pt 0pt 2pt 5pt;
+    margin      : 0pt;
+    text-align  : left !important;
+    transition  : all .2s;
+}
+.app.collapsible summary h3:hover,
+.app.collapsible[open] summary {
+    background : var(--app-title-bg);
+    color      : var(--app-title-fg);
+}
+.app.collapsible:not([open]) {
+    padding : 0pt;
+}

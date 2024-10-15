@@ -1,0 +1,23 @@
+#footer {
+    position : fixed;
+    display  : flex;
+
+    bottom : 0px;
+    left   : 0px;
+    right  : 0px;
+
+    padding : 5pt;
+    margin  : 0pt;
+
+    flex-direction  : row;
+    justify-content : space-between; 
+
+    background : #000000;
+    color      : white;
+
+    box-shadow : 0 0 5px 1px var(--pink-bright);
+}
+
+#footer > span > p {
+    display : inline;
+}

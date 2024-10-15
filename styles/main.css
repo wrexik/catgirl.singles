@@ -1,0 +1,59 @@
+/* Fix html dumbassery */
+html {
+    overflow-x : hidden;
+    margin     : 0;
+    padding    : 0;
+}
+
+
+/* Main font settings */
+* {
+    overflow-x             : hidden;
+
+    color                  : var(--fg-white);
+    background             : #0000;
+
+    font-family            : 'ibm-vga', monospace !important;
+    font-size: 19px;
+
+    font-variant-ligatures : all;
+}
+
+/* Document body, obviously */
+body {
+    height              : 100vh;
+    width               : 100vw;
+    padding             : 0;
+    margin              : 0;
+
+    overflow-x          : hidden;
+    overflow-y          : scroll;
+    
+    text-align          : center;
+    justify-content     : center;
+
+    background-image    : linear-gradient(#000000, #000000),
+                          linear-gradient(#090010, #090010),
+                          linear-gradient(#09001b, #09001b),
+                          linear-gradient(#12001b, #12001b),
+                          linear-gradient(#120024, #120024),
+                          linear-gradient(#16002b, #16002b);
+    background-repeat   : no-repeat;
+    background-position : 0% 0%, 0% 20%, 0% 40%, 0% 60%, 0% 80%, 0% 100%;
+    background-size     : 100vw 20%;
+
+    scrollbar-color     : #aa5aaa88 #0000;
+}
+
+@font-face {
+    font-family: "ibm-vga";
+    src: url("/fonts/ibmvga.woff") format('woff');
+  }
+
+.ibm-vega {
+
+    /* Web437_IBM_VGA_8x16.woff */
+
+    font-family: 'ibm-vga';
+    
+}

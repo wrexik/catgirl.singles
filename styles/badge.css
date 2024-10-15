@@ -1,0 +1,26 @@
+.badge_88x31 {
+    display     : inline-block;
+    width       : 88px;
+    height      : 31px;
+    padding     : 0px 0px 0px 0px;
+    margin      : 0px 0px 8px 8px;
+
+    overflow    : visible;
+
+    border      : 1px solid transparent;
+
+    transition  : all .2s;
+}
+
+.badge_88x31:hover {
+    border      : var(--app-border);
+    box-shadow  : var(--app-glow);
+}
+
+.badges_row {
+    display             : flex;
+    padding             : 0;
+    margin              : 0;
+
+    justify-content     : center;
+}

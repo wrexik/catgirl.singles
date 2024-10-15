@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>root@catgirl.singles</title>
+    <link rel="stylesheet" href="/styles/terminal.css">
+</head>
+<body>
+    <div class="container">
+        <div class="terminal">
+            <div id="neofetch">
+ ▄       ▄    root@catgirl.singles
+▄ ▀▄   ▄▀ ▄   Host: RPi 3B+ 1.2GHz
+█▄█▀███▀█▄█   System: BugOS 24.04 LTS
+ ▀███████▀    Shell: cricket 5.1
+▀█████████▀   CPU RAM DISK
+ ▄▀     ▀▄    <span id="cpu-usage"></span>% <span id="ram-usage"></span>% <span id="disk-usage"></span>%
+            </div>
+<script>
+    function getRandomPercentage() {
+        return Math.floor(Math.random() * 101);
+    }
+
+    document.getElementById('cpu-usage').textContent = getRandomPercentage();
+    document.getElementById('ram-usage').textContent = getRandomPercentage();
+    document.getElementById('disk-usage').textContent = getRandomPercentage();
+</script>
+            <div id="output"></div>
+            <div class="input-line">
+                <span id="prompt">/home/usr/1k4k/scripts/ $ </span>
+                <input type="text" id="command-input" autofocus autocomplete="off" placeholder=" type 'help' for help">
+            </div>
+        </div>
+    </div>
+    <script src="/scripts/terminal.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+:root {
+    /* Colours */
+    --blue-bright       : #aaaaff;
+    --pink-bright       : #ff6ffa;
+/*    --pink-bright       : #ff355e;*/
+
+    --app-bg            : #0005;
+    --app-fg            : white;
+    --app-title-bg      : var(--pink-bright);
+    --app-title-fg      : black;
+
+    --nav-fg            : white;
+    --nav-bg            : black;
+    --nav-fg-hover      : black;
+    --nav-bg-hover      : var(--pink-bright);
+
+    /* Shadows and glows */
+    --app-glow          : 0 0 10px var(--pink-bright);
+
+    --nav-glow-hover    : 0 0 12px var(--pink-bright);
+
+    --link-glow         : 0 0 5px white;
+
+    /* Borders */
+    --app-border        : 1px solid var(--pink-bright);
+
+    --nav-border        : 1px solid var(--pink-bright);
+}
+
+/* Font */
+@font-face {
+    font-family: 'Fira Code';
+    src        : url('/static/assets/FiraCode-Regular.ttf') format('truetype');
+}

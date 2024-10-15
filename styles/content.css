@@ -1,0 +1,27 @@
+.inline {
+    display : inline;
+}
+
+.link {
+    text-decoration : underline;
+}
+
+.link:hover {
+    text-decoration : none;
+    text-shadow     : var(--link-glow);
+}
+
+/* Longform content such as blog posts look better with left justify */
+.long_text {
+    padding     : 20pt;
+    text-align  : left;
+}
+
+.code {
+    border  : var(--app-border);
+    padding : 16px;
+}
+.code code {
+    padding : 0px;
+    margin  : 0px;
+}
