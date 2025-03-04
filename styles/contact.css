@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "ibm-vga";
+    src: url("/fonts/ibmvga.woff") format('woff');
+}
+
+.ibm-vega {
+
+    font-family: 'ibm-vga';
+
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background-color: #000;
+    color: #fff;
+    font-family: 'ibm-vga';
+    font-size: 1rem;
+    text-align: center;
+}
+
+.card {
+    padding-bottom: 10pt;
+    margin: 20px auto; /* Changed from margin: 20px; to center horizontally */
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #000;
+    color: #fff;
+    border: 1px solid #aa5aaa;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #700070;
+    scrollbar-color: #ff00ff88 #ffffff00;
+    max-width: 60%;
+    align-items: center;
+}
+
+.card_title {
+    float: left;
+    margin: 0;
+    padding-left: 2pt;
+    padding-bottom: 2pt;
+    text-align: left;
+    overflow: hidden;
+    background: #eb45eb;
+    color: #fff;
+    box-shadow: 0 0 10px #ff03ff;
+    font-size: 13pt;
+    font-weight: bold;
+    transition: all 0.2s;
+
+    display: flex;
+}
+
+.card_background {
+    background: #eb45eb
+}
+
+.card_buttons {
+    float: right;
+    margin: 0;
+    padding-right: 2pt;
+    padding-bottom: 2pt;
+    text-align: right;
+    overflow: hidden;
+    background: #eb45eb;
+    color: #fff;
+    box-shadow: 0 0 10px #eb45eb;
+    font-size: 8pt;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.card_content {
+    padding: 10pt;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    font-size: 8pt;
+    font-weight: normal;
+    transition: all 0.2s;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+
+    border: #fff 5px solid;
+    border-radius: 5px;
+}
+
+.card_image {
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+    text-align: center; /* For any inline content inside */
+    float: none; /* Remove the right float */
+    max-width: 100%; /* Ensure it fits within the container */
+
+    padding-top: 15px;
+}
+
+.button_close {
+    background: #eb45eb;
+    color: #fff;
+    border: 1px solid #eb45eb;
+    border-radius: 5px;
+    padding: 2pt 5pt;
+    margin: 2pt;
+    font-size: 8pt;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.button_full {
+    background: #eb45eb;
+    color: #fff;
+    border: 1px solid #eb45eb;
+    border-radius: 5px;
+    padding: 2pt 5pt;
+    margin: 2pt;
+    font-size: 8pt;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.button_mini {
+    background: #eb45eb;
+    color: #fff;
+    border: 1px solid #eb45eb;
+    border-radius: 5px;
+    padding: 2pt 5pt;
+    margin: 2pt;
+    font-size: 8pt;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+
+body {
+    color: #fff;
+    font-family: 'ibm-vga';
+}
