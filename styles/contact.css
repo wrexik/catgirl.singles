@@ -36,6 +36,22 @@
     align-items: center;
 }
 
+.card_alert {
+    padding-bottom: 10pt;
+    margin: 20px auto; /* Changed from margin: 20px; to center horizontally */
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #000;
+    color: #fff;
+    border: 1px solid #aa5aaa;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #700070;
+    scrollbar-color: #ff00ff88 #ffffff00;
+    max-width: 30%;
+    max-height: 20%;
+    align-items: center;
+}
+
 .card_title {
     float: left;
     margin: 0;

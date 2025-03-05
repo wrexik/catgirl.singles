@@ -1,15 +1,11 @@
-/**
- * Contact page button functionality
- * This script handles the window-like buttons in the contact.html page
- */
+
+// YES THIS IS AI I CANT SEEM TO GET INTO CODING JAVA :D
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Get references to buttons
     const minimizeButton = document.querySelector('.button_mini');
     const maximizeButton = document.querySelector('.button_full');
     const closeButton = document.querySelector('.button_close');
     
-    // Add event listeners
     if (minimizeButton) {
         minimizeButton.addEventListener('click', handleMinimize);
     }
@@ -22,24 +18,76 @@ document.addEventListener('DOMContentLoaded', function() {
         closeButton.addEventListener('click', handleClose);
     }
     
-    // Button handler functions
     function handleMinimize() {
         console.log('Minimize button clicked');
-        alert('Minimize button clicked');
-        // TODO: Implement minimize functionality
-        // For example: collapse the card to just show the header
+        alert('You cannot minimize this window!');
     }
     
     function handleMaximize() {
         console.log('Maximize/restore button clicked');
-        // TODO: Implement maximize functionality
-        // For example: expand the card to fill more of the viewport
+        alert('You cannot maximize this window!');
     }
     
     function handleClose() {
         console.log('Close button clicked');
-        // TODO: Implement close functionality
-        // For example: navigate back to main page
-        // window.location.href = 'index.html';
+        const cantLeaveMessage = document.createElement('a');
+        cantLeaveMessage.textContent = 'YOU CANT LEAVE 💀';
+        cantLeaveMessage.style.position = 'fixed';
+        
+        const x = Math.random() * (window.innerWidth - 200);  // 200px buffer for width
+        const y = Math.random() * (window.innerHeight - 50);   // 50px buffer for height
+        cantLeaveMessage.style.left = x + 'px';
+        cantLeaveMessage.style.top = y + 'px';
+        
+        cantLeaveMessage.style.fontSize = '2rem';
+        cantLeaveMessage.style.fontWeight = 'bold';
+        cantLeaveMessage.style.color = 'red';
+        cantLeaveMessage.style.zIndex = '9999';
+        cantLeaveMessage.style.cursor = 'pointer';
+        
+        cantLeaveMessage.href = '#';
+        cantLeaveMessage.onclick = function(e) {
+            alert('You thought you could escape? 😈');
+        };
+        
+        document.body.appendChild(cantLeaveMessage);
     }
+
+    const card = document.getElementById('card2');
+    
+    // Set the card to absolute position so it can move freely
+    card.style.position = 'absolute';
+    
+    // Initial position
+    let posX = Math.random() * (window.innerWidth - card.offsetWidth);
+    let posY = Math.random() * (window.innerHeight - card.offsetHeight);
+    
+    // Initial velocity (speed and direction)
+    let velX = 2;
+    let velY = 1;
+    
+    function animateCard() {
+        // Update position
+        posX += velX;
+        posY += velY;
+        
+        // Bounce off the edges
+        if (posX <= 0 || posX + card.offsetWidth >= window.innerWidth) {
+            velX = -velX;
+        }
+        
+        if (posY <= 0 || posY + card.offsetHeight >= window.innerHeight) {
+            velY = -velY;
+        }
+        
+        // Apply the new position
+        card.style.left = posX + 'px';
+        card.style.top = posY + 'px';
+        
+        // Continue animation
+        requestAnimationFrame(animateCard);
+    }
+    
+    // Start the animation
+    animateCard();
 });
